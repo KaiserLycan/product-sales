@@ -1,0 +1,8 @@
+main img{
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+}
+
+main img:hover{
+    opacity: 1;
+}

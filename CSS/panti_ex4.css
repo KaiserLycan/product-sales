@@ -1,0 +1,40 @@
+header {
+    background-image: url("../ASSETS/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg");
+    background-position: 0 -4rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-blend-mode:multiply;
+    background-color: rgb(28, 73, 141);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 600;
+}
+
+header p {
+    margin-top: 1rem;
+    line-height: 1.5rem;
+    max-width: 50%;
+    color: whitesmoke;
+}
+
+header a {
+    margin-top: 2rem;
+    background-color: var(--primary);
+    background-image: linear-gradient(var(--primary));
+    color: white;
+    padding: 1rem 3rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+header a:hover{
+    background-image: linear-gradient(var(--primary), var(--secondary));
+}

@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #0d6bbd;
+    --secondary: rgb(218, 151, 45);
+    --accent: #43A047;
+    --background: #F5F5F5;
+    --primary-font: "Poppins", Arial, Helvetica, sans-serif;
+    --secondary-font: "Roboto", Arial, Helvetica, sans-serif;
+    --h1-size: 4.5rem;
+    --h2-size: 3rem;
+    --h3-size: 2.75rem;
+    --h4-size: 2.5rem;
+    --h5-size: 2.25rem;
+    --h6-size: 2.125rem;
+    --body-text: 1rem;
+}
+
+* {
+    font-family: var(--secondary-font);
+    font-size: var(--body-text);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    width: 100vw;
+    height: fit-content;
+}
+
+
+h1 {
+    font-family: var(--primary-font);
+    font-size: var(--h1-size);
+}
+
+h2 {
+    font-size: var(--h2-size);
+}
+
+nav, footer{
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 5rem;
+    overflow: hidden;
+}
+
+
+
+nav ul, footer ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0.5rem 5rem;
+    place-content: center;
+}
+  
+nav ul li, footer ul li {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+  
+  
+nav ul li a, footer ul li i{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+footer ul li i {
+    font-size: 2rem;
+}
+
+
+nav img, footer img{
+    max-width: 7rem;
+}
+
+nav > a, footer > a {
+    color: white;
+    text-decoration: none;
+}
+
+  
+nav ul li:not(#current) a:hover:not(#current) {
+    background-color: var(--secondary);
+    color: black;
+}
+  
+#current {
+    background-color: #04AA6D;
+    border-radius: 0.5rem;
+}
+
+
+main {
+    min-height:  80vh;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+/* Table */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.541);
+}
+  
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+  
+table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+  
+table tr:hover {
+    background-color: #ddd;
+}
+  
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+}
+
+/* bootstrap */
+
+.dropdown {
+    display: none;
+}
+
+.dropdown > button{
+    padding: 1rem 2rem;
+    margin: 1rem 0 ;
+}
+
+.display-menu {
+    display: block;
+}
+
+
+  /*CSS Dropdown */
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+  
+.css_dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: fixed;
+    background: none;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+  
+.dropdown-content a {
+    color: white;
+    background-color: var(--accent);
+    margin-bottom: 0.2rem;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+  
+.css_dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 995px) {
+    nav ul{
+        display: none;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+}
