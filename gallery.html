@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | CodeMentor Hub</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./CSS/_global.css" />
+    <link rel="stylesheet" href="./CSS/gallery.css" />
+    <link
+      rel="shortcut icon"
+      href="../ASSETS/transparent_log0.png"
+      type="image/x-icon"
+    />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="index.html"
+        ><img src="../ASSETS/transparent_log0.png" alt="Code Mentor Logo"
+      /></a>
+      <ul>
+        <li>
+          <div class="css_dropdown">
+            <button class="dropbtn">
+              <a href="services.html">Services</a>
+            </button>
+            <div class="dropdown-content">
+              <a href="services.html">C++ Fundamentals</a>
+              <a href="services.html">Java for Web Development</a>
+              <a href="services.html">Python for Data Science</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li id="current"><a href="gallery.html">Gallery</a></li>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="contactUs.html">Contact</a></li>
+      </ul>
+
+      <!-- Bootstrap dropdown: Only shows when the screen is too small-->
+      <div class="dropdown">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          onclick="displayMenu()"
+        >
+          Menu <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" style="position: fixed">
+          <li><a href="services.html" class="text-dark">Services</a></li>
+          <li>
+            <a href="testimonials.html" class="text-dark">Testimonials</a>
+          </li>
+          <li><a href="gallery.html" class="text-dark">Gallery</a></li>
+          <li><a href="aboutUs.html" class="text-dark">About Us</a></li>
+          <li><a href="contactUs.html" class="text-dark">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="mt-4 p-5 text-white"
+      style="background-color: var(--primary)"
+    >
+      <div class="container">
+        <h1 class="display-4">See our Students in Action</h1>
+        <p class="lead">
+          Browse through our gallery to see real student projects and classroom
+          interactions.
+        </p>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+      <!-- Popup and Gallery Mixed -->
+      <h2>Featured Pictures</h2>
+      <hr />
+      <br />
+      <br />
+
+      <div class="row">
+        <div class="column gallery">
+          <img
+            src="../ASSETS/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg"
+            onclick="
+              openModal();
+              currentSlide(1);
+            "
+            class="hover-shadow cursor"
+          />
+          <div class="desc">
+            Immersed in Code: A collaborative hackathon where developers bring
+            ideas to life.
+          </div>
+        </div>
+        <div class="column gallery">
+          <img
+            src="../ASSETS/annie-spratt-vGgn0xLdy8s-unsplash.jpg"
+            onclick="
+              openModal();
+              currentSlide(2);
+            "
+            class="hover-shadow cursor"
+          />
+          <div class="desc">
+            Pair Programming in Action: Teamwork and innovation at a shared
+            workspace.
+          </div>
+        </div>
+        <div class="column gallery">
+          <img
+            src="../ASSETS/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg"
+            onclick="
+              openModal();
+              currentSlide(3);
+            "
+            class="hover-shadow cursor"
+          />
+          <div class="desc">
+            Focused and Efficient: A developer crafting solutions in a modern
+            workspace.
+          </div>
+        </div>
+        <div class="column gallery">
+          <img
+            src="../ASSETS/becomes-co-7oBmQz4bfrQ-unsplash.jpg"
+            onclick="
+              openModal();
+              currentSlide(4);
+            "
+            class="hover-shadow cursor"
+          />
+          <div class="desc">
+            Mentorship and Growth: Learning and coding together for better
+            solutions.
+          </div>
+        </div>
+      </div>
+
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <div class="numbertext">1 / 4</div>
+            <img
+              src="../ASSETS/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 4</div>
+            <img
+              src="../ASSETS/annie-spratt-vGgn0xLdy8s-unsplash.jpg"
+              style="width: 100%; object-position: top"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 4</div>
+            <img
+              src="../ASSETS/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg"
+              style="width: 100%; object-position: 0 -60rem"
+            />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 4</div>
+            <img
+              src="../ASSETS/becomes-co-7oBmQz4bfrQ-unsplash.jpg"
+              style="width: 100%"
+            />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+
+          <div class="thumbnails">
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="../ASSETS/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg"
+                onclick="currentSlide(1)"
+                alt="Student 1"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="../ASSETS/annie-spratt-vGgn0xLdy8s-unsplash.jpg"
+                onclick="currentSlide(2)"
+                alt="Student 2"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="../ASSETS/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg"
+                onclick="currentSlide(3)"
+                alt="Student 3"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="../ASSETS/becomes-co-7oBmQz4bfrQ-unsplash.jpg"
+                onclick="currentSlide(4)"
+                alt="Student 4"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br />
+      <br />
+      <br />
+
+      <h2>Image Collections</h2>
+      <hr />
+      <br />
+      <br />
+      <div class="container" id="display">
+        <div class="row">
+          <div class="col-sm">
+            <img
+              src="../ASSETS/altumcode-zE007SNgcdE-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/sigmund-Im_cQ6hQo10-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/pankaj-patel-u2Ru4QBXA5Q-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col-sm">
+            <img
+              src="../ASSETS//jefferson-santos-9SoCnyQmkzI-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/danial-igdery-FCHlYvR5gJI-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/becomes-co-7oBmQz4bfrQ-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+
+        <div class="row">
+          <div class="col-sm">
+            <img
+              src="../ASSETS/arif-riyanto-vJP-wZ6hGBg-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/annie-spratt-vGgn0xLdy8s-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+          <div class="col-sm">
+            <img
+              src="../ASSETS/alex-kotliarskyi-ourQHRTE2IM-unsplash.jpg"
+              class="rounded"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <a href="index.html"
+        ><img src="../ASSETS/transparent_log0.png" alt="Code Mentor Logo" />
+        <span>&copy; 2025 CodeMentor Hub</span></a
+      >
+
+      <ul>
+        <li><i class="bi bi-facebook"></i></li>
+        <li><i class="bi bi-instagram"></i></li>
+      </ul>
+    </footer>
+
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+      }
+    </script>
+  </body>
+</html>
